@@ -104,7 +104,7 @@ ESP8266 class has the following functions for controlling the ESP8266 module.
     WiFi.join			// Connect to the WiFi access point for the station.
     WiFi.disconnect		// Disconnect from the WiFi access point.
     WiFi.isConnect		// Inquire the connection establishment status with specified the access point.
-    WiFi.ip			// Get IP address and report resulted IP address string.
+    WiFi.ip				// Get IP address and report resulted IP address string.
     WiFi.status			// Inquire the current WiFi connection status.
     WiFi.setup			// Setup access connection topology.
     WiFi.connect		// Start the IP connection for client side.
