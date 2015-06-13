@@ -80,6 +80,8 @@ Download a zip file of the ESP8266 library code from [Download ZIP](https://gith
 ## How to use ESP8266 WiFi Library for Arduino
 
 ### ESP8266 Firmware version
+Required firmware version. Conformed firmware and the flash writer program could get from the [forum of Espressif].
+[forum of Espressif]:http://bbs.espressif.com/viewtopic.php?f=5&t=286 "ESP8266 SDK (esp_iot_sdk_v1.0.0_15_03_20)"
 ```
 AT version:0.22.0.0
 SDK version:1.0.0
