@@ -87,7 +87,7 @@ ESP8266 class instance can be referred with the **WiFi** variable from your sket
 #include "ESP8266.h"
 ````
 
-ESP8266 class has the following functions for controlling the ESP8266.  
+ESP8266 class has the following functions for controlling the ESP8266 module.  
 
     WiFi.reset			// Hardware or software reset for HSP8266 module.
     WiFi.begin			// Begin WIFI connection and transmission.
