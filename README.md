@@ -1,20 +1,25 @@
-ESP8266 WiFi Library for Arduino
----
+# ESP8266 WiFi Library for Arduino
+
 ESP8266 library for Arduino that facilitates the implementation of WiFi communication via user sketches.
 
-[ESP8266] is a very powerful and low cost WiFi module. It is contained with a sufficient size of EEPROM and a 32-bit MPU necessary to  TCP/IP protocol stack built-in. You can easily build a WiFi device with a serial communication from physical computing boards such as Arduino and Raspberry Pi.
+[ESP8266] is a very powerful and 802.11b/g/n protocol based low cost WiFi module. It is contained with a sufficient size of EEPROM and a 32-bit MPU necessary to  TCP/IP protocol stack built-in. You can easily build a WiFi device with a serial communication from physical computing boards such as Arduino and Raspberry Pi.
 
-[ESP8266]:https://nurdspace.nl/ESP8266 "ESP8266 wiki"
+![ESP8266 module](https://raw.github.com/wiki/hieromon/ESP8266/images/ESP8266_mini.png)
+![ESP8266 pinout](https://raw.github.com/wiki/hieromon/ESP8266/images/ESP8266_pinout.png)
 
-ESP8266 WiFi Library for Arduino provides a function for easily WiFi communication using ESP8266 from your sketch via the serial on such as Arduino UNO and Arduino MEGA.
+[ESP8266]:http://www.esp8266.com/wiki/doku.php?id=start "ESP8266 Community wiki"
+
+ESP8266 WiFi Library for Arduino provides a function for easily WiFi communication using ESP8266 from your sketch via the serial on such as Arduino UNO, Leonardo and MEGA.
 
 Also this library has a debug output facility can monitor the transmitted and received data.
 
+## Expamle the sketch
 
-Expamle the sketch
----
-This exmaple sketch sends HTTP1.1 request to url of `www.google.co.jp` via TCP port 80 and it receives a response.<br>
-The first step is join to a WiFi access point, and establish TCP connection with HTTP server. After that, send HTTP request and receive the response from the server. The series of steps will be used ESP8266 class methods.
+This exmaple sketch sends HTTP1.1 request to url of `www.google.co.jp` via TCP port 80 and it receives a response.  
+The first step is join to a WiFi access point, and establish TCP connection with HTTP server. After that, send HTTP request and receive the response from the server. The series of steps will be used ESP8266 class methods.  
+Actual wiring diagram of this example is the below. In this example, Software Serial is used to output of the response. you connect serial port of your PC to the D8 and D9 by the USB-Serial module such as FT232.
+
+![ESP8266 Wiring](https://raw.github.com/wiki/hieromon/ESP8266/images/ESP8266_wiring.png)
 
 ```Arduino
 #include "Arduino.h"
@@ -69,8 +74,40 @@ void loop() {
 }
 ```
 
-Installation on your arduino IDE
----
+## Installation on your arduino IDE
+
 Download a zip file of the ESP8266 library code from [Download ZIP](https://github.com/Hieromon/ESP8266/archive/master.zip "ESP8266 download a .zip") and you can import a .zip library in accordance with [here methods](http://www.arduino.cc/en/Guide/Libraries#toc4 "Importing a .zip Library") to your arduino IDE.
 
-##ESP8266 Class##
+## How to use ESP8266 WiFi Library for Arduino
+
+### Summary
+
+ESP8266 class instance can be referred with the **WiFi** variable from your sketch by including a ESP8266.h header file.
+
+````Arduino
+#include "ESP8266.h"
+````
+
+ESP8266 class has the following functions for controlling the ESP8266.  
+
+    WiFi.reset			// Hardware or software reset for HSP8266 module.
+    WiFi.begin			// Begin WIFI connection and transmission.
+    WiFi.end			// End WIFI connection.
+    WiFi.config			// Configure connection mode and multi connection.
+    WiFi.join			// Connect to the WiFi access point for the station.
+    WiFi.disconnect		// Disconnect from the WiFi access point.
+    WiFi.isConnect		// Inquire the connection establishment status with specified the access point.
+    WiFi.ip				// Get IP address and report resulted IP address string.
+    WiFi.status			// Inquire the current WiFi connection status.
+    WiFi.setup			// Setup access connection topology.
+    WiFi.connect		// Start the IP connection for client side.
+    WiFi.server			// Start the IP connection for server side with passive SYN.
+    WiFi.close			// Close the IP connection.
+    WiFi.send			// Sending data along with making a connection establishment.
+    WiFi.receive		// Start listening, and then stores the received data to the buffer.
+    WiFi.listen			// Starts the listening, and returns data length necessary for receiving.
+    WiFi.available		// Get the number of bytes available for reading from ESP8266. 
+    WiFi.read			// Return a character that was received from ESP8266.
+
+### Details
+See [ESP8266 WiFi Library for Arduino wiki page](https://github.com/Hieromon/ESP8266/wiki).
