@@ -18,9 +18,8 @@ Also this library has a debug output facility can monitor the transmitted and re
 This exmaple sketch sends HTTP1.1 request to url of `www.google.co.jp` via TCP port 80 and it receives a response.  
 The first step is join to a WiFi access point, and establish TCP connection with HTTP server. After that, send HTTP request and receive the response from the server. The series of steps will be used ESP8266 class methods.  
 Actual wiring diagram of this example is the below. In this example, Software Serial is used to output of the response. you connect serial port of your PC to the D8 and D9 by the USB-Serial module such as FT232.
-
 ![ESP8266 Wiring](https://raw.github.com/wiki/hieromon/ESP8266/images/ESP8266_wiring.png)
-
+Note: This example uses an 8-pin and 9-pin of Arduino for the received data output to the serial. This signal is different from the serial wiring for ESP8266.
 ```Arduino
 #include "Arduino.h"
 #include "ESP8266.h"
