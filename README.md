@@ -79,6 +79,12 @@ Download a zip file of the ESP8266 library code from [Download ZIP](https://gith
 
 ## How to use ESP8266 WiFi Library for Arduino
 
+### ESP8266 Firmware version
+```
+AT version:0.22.0.0
+SDK version:1.0.0
+````
+
 ### Summary
 
 ESP8266 class instance can be referred with the **WiFi** variable from your sketch by including a ESP8266.h header file.
